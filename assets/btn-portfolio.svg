@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="205" height="51" viewBox="0 0 205 51" role="img" aria-labelledby="t d">
+<title id="t">Portfolio ansehen ↗</title>
+<desc id="d"></desc>
+<style>svg{--bg:#f6fbec;--card:#fcffea;--card2:#e9f6da;--line:#c9dfb4;--frame:#0f170b;--text:#0f170b;--soft:#23331c;--muted:#3f5a33;--label:#4f7a3d;--accent:#2e5c1f;--onAccent:#fcffea;--hl:#bff2a6;--onHl:#0f170b;--mark:#bff2a6;--dots:#c9dfb4;--btnShadow:#0f170b;--liveFill:#bff2a6;--liveText:#0f170b;--liveDot:#2e5c1f;--jamDot:#bff2a6;--p0:#2e5c1f;--p1:#4f7a3d;--p2:#7fb35f;--p3:#bff2a6;--s0:#0f170b;--s1:#2e5c1f;--s2:#4f7a3d;--s3:#7fb35f;--s4:#bff2a6;--s5:#e9f6da}@media (prefers-color-scheme:dark){svg{--bg:#10160d;--card:#141c11;--card2:#1d2a18;--line:#2f4226;--frame:#bff2a6;--text:#f1f9e6;--soft:#d5e6c8;--muted:#a6c095;--label:#9fd88a;--accent:#bff2a6;--onAccent:#0f170b;--hl:#bff2a6;--onHl:#0f170b;--mark:#2e5c1f;--dots:#2a3a22;--btnShadow:#5f8f48;--liveFill:#2e5c1f;--liveText:#e3fdc9;--liveDot:#bff2a6;--jamDot:#141c11;--p0:#bff2a6;--p1:#9fd88a;--p2:#6f9f55;--p3:#e3fdc9;--s0:#e3fdc9;--s1:#bff2a6;--s2:#8fc874;--s3:#5f8f48;--s4:#3c6130;--s5:#22331c}}</style>
+
+
+<rect x="4.5" y="4.5" width="197.27" height="44" rx="22" style="fill:var(--btnShadow)"/>
+<rect x="1.5" y="1.5" width="197.27" height="44" rx="22" stroke-width="1.5" style="fill:var(--accent);stroke:var(--accent)"/>
+
+<text x="23.5" y="29.5" font-family="'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="17" font-weight="600" textLength="153.27" lengthAdjust="spacing" style="fill:var(--onAccent)">Portfolio ansehen ↗</text>
+</svg>
