@@ -15,10 +15,14 @@
 
 Ich studiere und entwickle neben der Uni eigene Software. Was meine Projekte verbindet: Man kann ihnen bei der Arbeit zusehen und selbst eingreifen – Partikel, die sich vor- und zurückspulen lassen, ein EKG, das man stört und wieder filtert, oder ein Spielabend, bei dem zwölf Leute um eine Kiste sitzen.
 
-- **Zuletzt** – den Editor von Particle Playground fürs Handy umgebaut
+- **Zuletzt** – mit Jack’s Last Show den 1. Platz beim nanos world Halloween Game Jam 2026 geholt, außerdem den Editor von Particle Playground fürs Handy umgebaut
 - **Als Nächstes** – neue Labore für MedLab Studio: Wearable-Sensordaten und Arzneimittelspiegel
 - **Nebenbei** – Spielmodi und Addons in Lua für Garry’s Mod und nanos world
 - **Wie ich arbeite** – Tests für die Kernlogik, Commits mit Begründung, Grenzen direkt in der Oberfläche
+
+## Ausgezeichnet
+
+<a href="https://nanos-world.com/game-jams/halloween-2026"><img src="assets/award.svg" width="100%" alt="1. Platz beim nanos world Halloween Game Jam 2026, Ergebnisse vom 4. November 2026. Mit Jack’s Last Show, eingereicht als „Death in the Box“, hat unser Team TimeTales das öffentliche Playtest-Wochenende gewonnen. Gesamtwertung: 1. Platz mit 4,69. Sonderpreise: Best Theme Fit mit 4,77 und Best Creativity mit 4,74."></a>
 
 ## Projekte
 
@@ -35,7 +39,7 @@ Ich studiere und entwickle neben der Uni eigene Software. Was meine Projekte ver
 </p>
 
 <p align="center">
-  <a href="https://github.com/Awa0174/NanosworldgameJam"><img src="assets/card-jack.svg" width="49%" alt="Jack’s Last Show – Game Jam, nanos world. Ein Party-Spielmodus für bis zu 12 Leute im Zirkuszelt um Jack in der Box."></a>
+  <a href="https://github.com/Awa0174/NanosworldgameJam"><img src="assets/card-jack.svg" width="49%" alt="Jack’s Last Show – 1. Platz beim nanos world Halloween Game Jam 2026. Ein Party-Spielmodus für bis zu 12 Leute im Zirkuszelt um Jack in der Box."></a>
   <a href="https://awa0174.github.io/#projekt=timetales"><img src="assets/card-timetales.svg" width="49%" alt="TimeTales – privat, Garry’s Mod. Drei Addons für einen Harry-Potter-Rollenspielserver, etwa eine Schülersprecher-Wahl, die jeden Monat von selbst startet."></a>
 </p>
 
