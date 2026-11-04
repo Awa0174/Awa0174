@@ -22,7 +22,7 @@ Ich studiere und entwickle neben der Uni eigene Software. Was meine Projekte ver
 
 ## Ausgezeichnet
 
-<a href="https://github.com/Awa0174/NanosworldgameJam"><img src="assets/award.svg" width="100%" alt="1. Platz beim nanos world Halloween Game Jam 2026, Ergebnisse vom 4. November 2026. Mit Jack’s Last Show, eingereicht als „Death in the Box“, hat unser Team TimeTales das öffentliche Playtest-Wochenende gewonnen. Gesamtwertung: 1. Platz mit 4,69. Sonderpreise: Best Theme Fit mit 4,77 und Best Creativity mit 4,74."></a>
+<a href="https://nanos-world.com/game-jams/halloween-2026"><img src="assets/award.svg" width="100%" alt="1. Platz beim nanos world Halloween Game Jam 2026, Ergebnisse vom 4. November 2026. Mit Jack’s Last Show, eingereicht als „Death in the Box“, hat unser Team TimeTales das öffentliche Playtest-Wochenende gewonnen. Gesamtwertung: 1. Platz mit 4,69. Sonderpreise: Best Theme Fit mit 4,77 und Best Creativity mit 4,74."></a>
 
 ## Projekte
 
