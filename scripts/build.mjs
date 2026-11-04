@@ -194,8 +194,8 @@ const cards = {
     tags: ['TypeScript', 'Node.js', 'whisper.cpp'], img: 'jarvis-boot-640.webp', cta: 'Meine Änderungen ↗',
   },
   jack: {
-    status: ['jam', 'Game Jam'], meta: 'nanos world · v0.13', title: 'Jack’s Last Show',
-    lead: 'Ein Party-Spielmodus für bis zu 12 Leute: Alle sitzen im Zirkuszelt um Jack in der Box, Events und Karten entscheiden, wer übrig bleibt.',
+    status: ['jam', '1. Platz'], meta: 'Halloween Game Jam 2026 · nanos world', title: 'Jack’s Last Show',
+    lead: 'Unser Siegerbeitrag zum nanos world Halloween Game Jam 2026: ein Party-Spielmodus für bis zu 12 Leute im Zirkuszelt um Jack in der Box. Events und Karten entscheiden, wer übrig bleibt.',
     tags: ['Lua', 'nanos world', 'WebUI'], img: 'jacks-last-show-640.webp', cta: 'Code ansehen →',
   },
   timetales: {
@@ -410,6 +410,67 @@ ${lines.map((l, i) => text(bx + pad, by + pad + 100 + i * 30, l, { size: 20, fil
   return doc(W, H, { title: 'Lust auf Austausch?', desc: lines.join(' '), defs }, body);
 }
 
+/* ======================================================================
+   Auszeichnung: Game-Jam-Sieg mit Medaille und Wertungen
+   ====================================================================== */
+
+const jamAward = {
+  kicker: 'nanos world · Halloween Game Jam 2026 · 4. November 2026',
+  title: '1. Platz beim Halloween Game Jam',
+  lead: 'Mit Jack’s Last Show (eingereicht als „Death in the Box“) hat unser Team TimeTales das öffentliche Playtest-Wochenende gewonnen – und dazu zwei Sonderpreise.',
+  scores: [
+    { label: 'Gesamtwertung', value: '1. Platz', score: '4,69', top: true },
+    { label: 'Best Theme Fit', value: 'Sonderpreis', score: '4,77' },
+    { label: 'Best Creativity', value: 'Sonderpreis', score: '4,74' },
+  ],
+};
+
+/** Medaille mit Band, nur aus Formen (Emojis haben keine festen Breiten). */
+function medal(cx, cy, rad, label) {
+  const bw = rad * 0.62, bh = rad * 1.25, top = cy - rad - bh + rad * 0.35;
+  const band = (dx, skew) => `<polygon points="${r(cx + dx - bw / 2)},${r(top)} ${r(cx + dx + bw / 2)},${r(top)} ${r(cx + dx + bw / 2 + skew)},${r(cy - rad * 0.4)} ${r(cx + dx - bw / 2 + skew)},${r(cy - rad * 0.4)}" fill="${t.card2}" stroke="${t.frame}" stroke-width="2" stroke-linejoin="round"/>`;
+  return band(-bw * 0.55, bw * 0.5) + band(bw * 0.55, -bw * 0.5)
+    + `<circle cx="${r(cx + 5)}" cy="${r(cy + 5)}" r="${rad}" fill="${t.btnShadow}"/>`
+    + `<circle cx="${r(cx)}" cy="${r(cy)}" r="${rad}" fill="${t.hl}" stroke="${t.frame}" stroke-width="2"/>`
+    + `<circle cx="${r(cx)}" cy="${r(cy)}" r="${r(rad * 0.74)}" fill="none" stroke="${t.onHl}" stroke-width="1.5" stroke-dasharray="2 4" stroke-linecap="round"/>`
+    + text(cx - measure(label, { weight: 700, size: rad * 0.9 }) / 2, cy + rad * 0.32, label, { weight: 700, size: rad * 0.9, fill: t.onHl });
+}
+
+function award() {
+  const W = 1200, X = 2, Y = 2, PW = 1188, S = 8, pad = 40;
+  const side = 200;
+  const tx = X + side + pad, tw = PW - (tx - X) - pad;
+  const lines = wrap(jamAward.lead, tw, { size: 20 });
+  const kickY = Y + pad + 16;
+  const titleY = kickY + 48;
+  const leadY = titleY + 38;
+  const tilesY = leadY + (lines.length - 1) * 30 + 30;
+  const tileH = 74, gap = 16, tileW = (tw - gap * 2) / 3;
+  const PH = tilesY + tileH - Y + pad;
+  let body = panel(X, Y, PW, PH, { radius: 18, shadow: S, stroke: 2 });
+  body += `<g clip-path="url(#frame)"><rect x="${X}" y="${Y}" width="${side}" height="${PH}" fill="url(#dots)"/></g>`;
+  body += `<line x1="${X + side}" x2="${X + side}" y1="${Y}" y2="${Y + PH}" stroke="${t.frame}" stroke-width="1.5"/>`;
+  body += medal(X + side / 2, Y + PH / 2 + 30, 54, '1');
+  body += text(tx, kickY, jamAward.kicker, { font: 'mono', size: 15, fill: t.label });
+  body += text(tx, titleY, jamAward.title, { weight: 700, size: 36, fill: t.text });
+  body += lines.map((l, i) => text(tx, leadY + i * 30, l, { size: 20, fill: t.soft })).join('');
+  jamAward.scores.forEach((s, i) => {
+    const x = tx + i * (tileW + gap);
+    body += panel(x, tilesY, tileW, tileH, { radius: 12, shadow: 4, fill: s.top ? t.hl : t.card2 });
+    const ink = s.top ? t.onHl : t.text;
+    body += text(x + 18, tilesY + 30, s.label, { weight: 700, size: 18, fill: ink });
+    body += text(x + 18, tilesY + 56, s.value, { size: 15, fill: s.top ? t.onHl : t.muted });
+    const sw = measure(s.score, { font: 'mono', size: 30 });
+    body += text(x + tileW - 18 - sw, tilesY + 48, s.score, { font: 'mono', size: 30, fill: ink });
+  });
+  const defs = `<clipPath id="frame"><rect x="${X}" y="${Y}" width="${PW}" height="${PH}" rx="18"/></clipPath>${dotsPattern}`;
+  return doc(W, PH + S + 4, {
+    title: jamAward.title,
+    desc: `${jamAward.kicker}. ${jamAward.lead} ${jamAward.scores.map((s) => `${s.label}: ${s.value}, ${s.score}`).join('. ')}.`,
+    defs,
+  }, body);
+}
+
 /* ====================================================================== */
 
 write('banner', banner());
@@ -420,6 +481,7 @@ for (const row of [['medlab', 'jarvis'], ['jack', 'timetales']]) {
   const height = Math.max(...row.map((id) => smallCard(cards[id]).height));
   for (const id of row) write(`card-${id}`, smallCard(cards[id], height).svg);
 }
+write('award', award());
 write('stack', stackPanel());
 write('contact', contact());
 console.log('SVGs geschrieben nach assets/');
