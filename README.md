@@ -1,7 +1,7 @@
 <a href="https://awa0174.github.io/"><img src="assets/banner.svg" width="100%" alt="Hi, I’m Awa. Web development, simulations and modding – websites, my own software projects and game modes, interactive whenever possible."></a>
 
 <p align="center">
-  <img src="assets/typing.svg" width="100%" alt="Awa builds a particle engine for the browser, writes Lua game modes for nanos world, makes addons for Garry’s Mod, turns medical tech into hands-on labs and builds websites without a framework.">
+  <img src="assets/typing.svg" width="100%" alt="Awa builds a particle engine for the browser, writes Lua game modes for nanos world, makes addons for Garry’s Mod, builds a Tokyo Ghoul server for nanos world, tests trading ideas on a demo account, turns medical tech into hands-on labs and builds websites without a framework.">
 </p>
 
 <p align="center">
@@ -16,8 +16,9 @@
 I’m a student and build my own software alongside university. What my projects have in common: you can watch them work and step in yourself – particles you can rewind, an ECG you can disturb and filter clean again, or a game night with twelve people gathered around a box.
 
 - **Recently** – won 1st place at the nanos world Halloween Game Jam 2026 with Jack’s Last Show, and rebuilt the Particle Playground editor for mobile
+- **Right now** – Ward Zero, a Tokyo Ghoul roleplay server for nanos world, with its own Discord control center and animation pipeline
 - **Up next** – new labs for MedLab Studio: wearable sensor data and drug levels
-- **On the side** – Lua game modes and addons for Garry’s Mod and nanos world
+- **On the side** – Lua game modes and addons for Garry’s Mod and nanos world, and a trading AI that only ever runs on a demo account
 - **How I work** – tests for the core logic, commits that explain why, limits shown right in the UI
 
 ## Awards
@@ -43,9 +44,23 @@ I’m a student and build my own software alongside university. What my projects
   <a href="https://awa0174.github.io/#projekt=timetales"><img src="assets/card-timetales.svg" width="49%" alt="TimeTales – private, Garry’s Mod. Three addons for a Harry Potter roleplay server, such as a head student election that starts on its own every month."></a>
 </p>
 
+## Currently building
+
+<sub>These repositories are private, so the cards show what’s inside instead of linking to the code. Curious? Ask me on Discord.</sub>
+
+<p align="center">
+  <img src="assets/card-wardzero.svg" width="49%" alt="Ward Zero – private, nanos world, early prototype. An open-world RPG and roleplay server inspired by Tokyo Ghoul, with server code, a district generator, combat prototypes and a character pipeline.">
+  <img src="assets/card-jutsu.svg" width="49%" alt="Jutsu Animation Pipeline – private, Blender add-on v1.3. Poses hand signs and weapon grips and carries animations from Blender through Unreal into a nanos world server.">
+</p>
+
+<p align="center">
+  <img src="assets/card-kronosis.svg" width="49%" alt="Kronosis – private trading AI, demo account only. A learning and research platform for rule-based gold trading with validation and a risk layer before every order on a MetaTrader 5 demo account.">
+  <img src="assets/card-bfc.svg" width="49%" alt="Beyond Frame Control – private Discord bot v0.1. The control center for Ward Zero: permissions, moderation and game server control from Discord, with an audit log.">
+</p>
+
 ## What I work with
 
-<img src="assets/stack.svg" width="100%" alt="TypeScript and React in Particle Playground, MedLab Studio and Jarvis. Lua in Jack’s Last Show and TimeTales. WebGL2 and GLSL in Particle Playground. Python and FastAPI in the MedLab Studio backend. Node.js in Jarvis. Vitest, pytest and Playwright for tests. Vite and Tailwind CSS. HTML and CSS for my website.">
+<img src="assets/stack.svg" width="100%" alt="TypeScript and React in Particle Playground, MedLab Studio and Jarvis. Lua in Jack’s Last Show, TimeTales and Ward Zero. WebGL2 and GLSL in Particle Playground. Python and FastAPI in MedLab Studio, Kronosis and Beyond Frame Control. Node.js in Jarvis. Vitest, pytest and Playwright for tests. Vite and Tailwind CSS. HTML and CSS for my website. Unreal Engine and Blender for the Ward Zero pipeline. Discord bots and SQLite in Beyond Frame Control and Naruto RP.">
 
 ## On GitHub
 

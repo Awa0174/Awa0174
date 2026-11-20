@@ -103,6 +103,8 @@ const phrases = [
   'builds a particle engine for the browser',
   'writes Lua game modes for nanos world',
   'makes addons for Garry’s Mod',
+  'builds a Tokyo Ghoul server for nanos world',
+  'tests trading ideas on a demo account',
   'turns medical tech into hands-on labs',
   'builds websites without a framework',
 ];
@@ -209,6 +211,62 @@ const cards = {
         ['−3 days', 'Nominations close, postal vote opens'],
         ['Election', 'Ceremony in the Great Hall'],
         ['Ceremony', 'Count, run-off if needed, appointment'],
+      ],
+    },
+  },
+  wardzero: {
+    status: ['private', 'Private'], meta: 'nanos world · early prototype', title: 'Ward Zero',
+    lead: 'An open-world RPG and roleplay server inspired by Tokyo Ghoul. I’m building the server code, a generator for the Kurogane district, combat prototypes and the whole character pipeline.',
+    tags: ['Lua', 'nanos world', 'Unreal Engine', 'Blender'], cta: 'Private repo · ask me on Discord',
+    example: {
+      kicker: 'Inside the project', code: 'ward-zero', title: 'What I’m building',
+      steps: [
+        ['Server', 'Lua packages for characters and weapons'],
+        ['Map', 'Generator for the Kurogane district'],
+        ['Combat', 'Quinque weapons and kagune prototypes'],
+        ['Pipeline', 'Blender → Unreal → nanos world'],
+      ],
+    },
+  },
+  jutsu: {
+    status: ['private', 'Private'], meta: 'Blender add-on · v1.3', title: 'Jutsu Animation Pipeline',
+    lead: 'A Blender add-on for posing hand signs and weapon grips, plus scripts that carry an animation from Blender through Unreal into a running nanos world server. First test: a fire-style jutsu.',
+    tags: ['Python', 'Blender', 'Unreal Engine', 'Lua'], cta: 'Private repo · ask me on Discord',
+    example: {
+      kicker: 'Example: my pipeline', code: 'katon_test', title: 'From Blender to the server',
+      steps: [
+        ['Pose', 'Hand signs with my add-on'],
+        ['Export', 'FBX straight from Blender'],
+        ['Import', 'Animation montage in Unreal'],
+        ['Play', 'Test package on the game server'],
+      ],
+    },
+  },
+  kronosis: {
+    status: ['private', 'Private'], meta: 'Trading AI · demo account only', title: 'Kronosis',
+    lead: 'A learning and research platform for rule-based gold trading. Every signal passes validation and a risk layer before an order reaches a MetaTrader 5 demo account. Real-money accounts are refused by design.',
+    tags: ['Python', 'FastAPI', 'React', 'MetaTrader 5'], cta: 'Private repo · ask me on Discord',
+    example: {
+      kicker: 'Example: one trade', code: 'kronosis run', title: 'Every signal gets checked',
+      steps: [
+        ['Signal', 'Rule-based setup for gold'],
+        ['Check', 'Validated on held-out data'],
+        ['Risk', 'Position size, news pause, kill switch'],
+        ['Demo', 'Staggered limit orders on MT5 demo'],
+      ],
+    },
+  },
+  bfc: {
+    status: ['private', 'Private'], meta: 'Discord bot · v0.1', title: 'Beyond Frame Control',
+    lead: 'The control center for Ward Zero: a Python Discord bot plus a Lua bridge, so the team can handle permissions, moderation and the game server straight from Discord, with an audit log for every action.',
+    tags: ['Python', 'Lua', 'Discord', 'SQLite'], cta: 'Private repo · ask me on Discord',
+    example: {
+      kicker: 'How it connects', code: 'bfc', title: 'From game server to Discord',
+      steps: [
+        ['Server', 'Lua bridge on nanos world'],
+        ['API', 'Password-protected HTTP'],
+        ['Core', 'Permissions, audit log, game status'],
+        ['Discord', 'One module per feature'],
       ],
     },
   },
@@ -343,13 +401,15 @@ ${b.svg}
 
 const stack = [
   { icons: ['typescript', 'react'], name: 'TypeScript & React', use: 'Particle Playground, MedLab Studio, Jarvis' },
-  { icons: ['lua'], name: 'Lua', use: 'Jack’s Last Show, TimeTales' },
+  { icons: ['lua'], name: 'Lua', use: 'Jack’s Last Show, TimeTales, Ward Zero' },
   { icons: ['webgl'], name: 'WebGL2 & GLSL', use: 'Rendering and simulation in Particle Playground' },
-  { icons: ['python', 'fastapi'], name: 'Python & FastAPI', use: 'Backend of MedLab Studio' },
+  { icons: ['python', 'fastapi'], name: 'Python & FastAPI', use: 'MedLab Studio, Kronosis, Beyond Frame Control' },
   { icons: ['nodedotjs'], name: 'Node.js', use: 'Bridge in Jarvis' },
   { icons: ['vitest', 'pytest'], name: 'Vitest, pytest, Playwright', use: 'Tests in Particle Playground and MedLab Studio' },
   { icons: ['vite', 'tailwindcss'], name: 'Vite & Tailwind CSS', use: 'Vite in both web apps, Tailwind in MedLab Studio' },
   { icons: ['html5', 'css'], name: 'HTML & CSS', use: 'my website – no framework' },
+  { icons: ['unrealengine'], name: 'Unreal Engine & Blender', use: 'Asset and animation pipeline for Ward Zero' },
+  { icons: ['discord', 'sqlite'], name: 'Discord bots & SQLite', use: 'Beyond Frame Control, Naruto RP characters' },
 ];
 
 function stackPanel() {
@@ -477,7 +537,7 @@ write('banner', banner());
 write('typing', typing());
 for (const [id, spec] of Object.entries(buttons)) write(`btn-${id}`, button(spec));
 write('card-particle', featuredCard(cards.particle));
-for (const row of [['medlab', 'jarvis'], ['jack', 'timetales']]) {
+for (const row of [['medlab', 'jarvis'], ['jack', 'timetales'], ['wardzero', 'jutsu'], ['kronosis', 'bfc']]) {
   const height = Math.max(...row.map((id) => smallCard(cards[id]).height));
   for (const id of row) write(`card-${id}`, smallCard(cards[id], height).svg);
 }
