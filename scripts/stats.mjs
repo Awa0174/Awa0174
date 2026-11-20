@@ -48,10 +48,10 @@ const total = Object.values(bytes).reduce((a, b) => a + b, 0);
 const sorted = Object.entries(bytes).sort((a, b) => b[1] - a[1]);
 const top = sorted.slice(0, 5).map(([name, n]) => ({ name, share: n / total }));
 const rest = 1 - top.reduce((a, l) => a + l.share, 0);
-if (rest > 0.0005) top.push({ name: 'Sonstige', share: rest });
+if (rest > 0.0005) top.push({ name: 'Other', share: rest });
 
-const date = new Date(latest.pushed_at).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'Europe/Berlin' });
-const pct = (s) => `${(s * 100).toLocaleString('de-DE', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} %`;
+const date = new Date(latest.pushed_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'Europe/Berlin' });
+const pct = (s) => `${(s * 100).toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`;
 
 function stats() {
   const W = 1200, X = 2, Y = 2, PW = 1188, S = 8, pad = 36;
@@ -65,9 +65,9 @@ function stats() {
   let body = panel(X, Y, PW, PH, { radius: 18, shadow: S, stroke: 2 });
 
   const tiles = [
-    { value: String(repos.length), label: 'eigene öffentliche Repos' },
-    { value: commits.toLocaleString('de-DE'), label: 'Commits in diesen Repos' },
-    { value: latest.name, label: `zuletzt aktiv · ${date}`, small: true },
+    { value: String(repos.length), label: 'own public repos' },
+    { value: commits.toLocaleString('en-US'), label: 'commits in these repos' },
+    { value: latest.name, label: `last active · ${date}`, small: true },
   ];
   tiles.forEach((tile, i) => {
     const x = X + pad + i * (tileW + tileGap), y = Y + pad;
@@ -78,7 +78,7 @@ function stats() {
       + text(x + 22, y + 94, tile.label, { font: 'mono', size: 14, fill: t.muted });
   });
 
-  body += text(X + pad, barY - 18, 'Sprachen in meinen öffentlichen Repos', { font: 'mono', size: 15, fill: t.label });
+  body += text(X + pad, barY - 18, 'Languages in my public repos', { font: 'mono', size: 15, fill: t.label });
   const barW = PW - pad * 2;
   let bx = X + pad;
   body += `<clipPath id="bar"><rect x="${X + pad}" y="${barY}" width="${barW}" height="22" rx="11"/></clipPath><g clip-path="url(#bar)">`;
@@ -99,8 +99,8 @@ function stats() {
   });
 
   return doc(W, PH + S + 4, {
-    title: 'Auf GitHub',
-    desc: `${repos.length} eigene öffentliche Repos, ${commits} Commits, zuletzt aktiv in ${latest.name} am ${date}. Sprachen: ${top.map((l) => `${l.name} ${pct(l.share)}`).join(', ')}.`,
+    title: 'On GitHub',
+    desc: `${repos.length} own public repos, ${commits} commits, last active in ${latest.name} on ${date}. Languages: ${top.map((l) => `${l.name} ${pct(l.share)}`).join(', ')}.`,
   }, body);
 }
 
