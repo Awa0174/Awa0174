@@ -1,64 +1,64 @@
-<a href="https://awa0174.github.io/"><img src="assets/banner.svg" width="100%" alt="Hi, ich bin Awa. Webentwicklung, Simulationen und Modding – Websites, eigene Softwareprojekte und Spielmodi, am liebsten interaktiv."></a>
+<a href="https://awa0174.github.io/"><img src="assets/banner.svg" width="100%" alt="Hi, I’m Awa. Web development, simulations and modding – websites, my own software projects and game modes, interactive whenever possible."></a>
 
 <p align="center">
-  <img src="assets/typing.svg" width="100%" alt="Awa baut eine Partikel-Engine für den Browser, schreibt Spielmodi in Lua, baut Addons für Garry’s Mod, macht Medizintechnik zum Ausprobieren und baut Websites ohne Framework.">
+  <img src="assets/typing.svg" width="100%" alt="Awa builds a particle engine for the browser, writes Lua game modes for nanos world, makes addons for Garry’s Mod, turns medical tech into hands-on labs and builds websites without a framework.">
 </p>
 
 <p align="center">
-  <a href="https://awa0174.github.io/"><img src="assets/btn-portfolio.svg" alt="Portfolio ansehen"></a>
-  <a href="https://awa0174.github.io/Particle-Playground/"><img src="assets/btn-demo.svg" alt="Live-Demo starten"></a>
+  <a href="https://awa0174.github.io/"><img src="assets/btn-portfolio.svg" alt="View portfolio"></a>
+  <a href="https://awa0174.github.io/Particle-Playground/"><img src="assets/btn-demo.svg" alt="Launch live demo"></a>
   <a href="https://discord.com/users/972555021814202468"><img src="assets/btn-discord.svg" alt="Discord"></a>
   <a href="https://steamcommunity.com/id/-Awa/"><img src="assets/btn-steam.svg" alt="Steam"></a>
 </p>
 
-## Über mich
+## About me
 
-Ich studiere und entwickle neben der Uni eigene Software. Was meine Projekte verbindet: Man kann ihnen bei der Arbeit zusehen und selbst eingreifen – Partikel, die sich vor- und zurückspulen lassen, ein EKG, das man stört und wieder filtert, oder ein Spielabend, bei dem zwölf Leute um eine Kiste sitzen.
+I’m a student and build my own software alongside university. What my projects have in common: you can watch them work and step in yourself – particles you can rewind, an ECG you can disturb and filter clean again, or a game night with twelve people gathered around a box.
 
-- **Zuletzt** – mit Jack’s Last Show den 1. Platz beim nanos world Halloween Game Jam 2026 geholt, außerdem den Editor von Particle Playground fürs Handy umgebaut
-- **Als Nächstes** – neue Labore für MedLab Studio: Wearable-Sensordaten und Arzneimittelspiegel
-- **Nebenbei** – Spielmodi und Addons in Lua für Garry’s Mod und nanos world
-- **Wie ich arbeite** – Tests für die Kernlogik, Commits mit Begründung, Grenzen direkt in der Oberfläche
+- **Recently** – won 1st place at the nanos world Halloween Game Jam 2026 with Jack’s Last Show, and rebuilt the Particle Playground editor for mobile
+- **Up next** – new labs for MedLab Studio: wearable sensor data and drug levels
+- **On the side** – Lua game modes and addons for Garry’s Mod and nanos world
+- **How I work** – tests for the core logic, commits that explain why, limits shown right in the UI
 
-## Ausgezeichnet
+## Awards
 
-<a href="https://nanos-world.com/game-jams/halloween-2026"><img src="assets/award.svg" width="100%" alt="1. Platz beim nanos world Halloween Game Jam 2026, Ergebnisse vom 4. November 2026. Mit Jack’s Last Show, eingereicht als „Death in the Box“, hat unser Team TimeTales das öffentliche Playtest-Wochenende gewonnen. Gesamtwertung: 1. Platz mit 4,69. Sonderpreise: Best Theme Fit mit 4,77 und Best Creativity mit 4,74."></a>
+<a href="https://nanos-world.com/game-jams/halloween-2026"><img src="assets/award.svg" width="100%" alt="1st place at the nanos world Halloween Game Jam 2026, results from November 4, 2026. With Jack’s Last Show, submitted as “Death in the Box”, our team TimeTales won the public playtest weekend. Overall: 1st place with 4.69. Special awards: Best Theme Fit with 4.77 and Best Creativity with 4.74."></a>
 
-## Projekte
+## Projects
 
-<a href="https://awa0174.github.io/Particle-Playground/"><img src="assets/card-particle.svg" width="100%" alt="Particle Playground – Live-Demo, Web-App v1.0. Ein Editor im Browser, mit dem man Partikeleffekte wie Galaxien, Feuerwerk oder Polarlichter baut, animiert und als Video exportiert – am PC und am Handy."></a>
+<a href="https://awa0174.github.io/Particle-Playground/"><img src="assets/card-particle.svg" width="100%" alt="Particle Playground – live demo, web app v1.0. A browser editor for building particle effects like galaxies, fireworks or northern lights, animating them and exporting them as video – on desktop and on mobile."></a>
 
 <p align="center">
-  <a href="https://github.com/Awa0174/Particle-Playground"><img src="assets/btn-github.svg" alt="Code von Particle Playground"></a>
-  <a href="https://github.com/Awa0174/Particle-Playground/issues"><img src="assets/btn-feedback.svg" alt="Feedback zu Particle Playground geben"></a>
+  <a href="https://github.com/Awa0174/Particle-Playground"><img src="assets/btn-github.svg" alt="Particle Playground source code"></a>
+  <a href="https://github.com/Awa0174/Particle-Playground/issues"><img src="assets/btn-feedback.svg" alt="Give feedback on Particle Playground"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Awa0174/MedLab-Studio"><img src="assets/card-medlab.svg" width="49%" alt="MedLab Studio – in Entwicklung. Medizintechnik zum Ausprobieren: ein künstliches EKG stören und wieder sauber filtern, Reaktionszeit messen oder zwei Gerätebedienungen vergleichen."></a>
-  <a href="https://github.com/adewaskar/jarvis/compare/main...Awa0174:jarvis:feat/windows-setup"><img src="assets/card-jarvis.svg" width="49%" alt="Jarvis – Fork. Ein Sprachassistent von Aditya Dewaskar, den ich zu einem deutschsprachigen Helfer für den Windows-Alltag ausbaue."></a>
+  <a href="https://github.com/Awa0174/MedLab-Studio"><img src="assets/card-medlab.svg" width="49%" alt="MedLab Studio – in progress. Medical technology you can play with: add noise to a synthetic ECG and filter it clean again, measure your reaction time or compare two device interfaces."></a>
+  <a href="https://github.com/adewaskar/jarvis/compare/main...Awa0174:jarvis:feat/windows-setup"><img src="assets/card-jarvis.svg" width="49%" alt="Jarvis – fork. A voice assistant by Aditya Dewaskar that I’m extending into a German-speaking helper for everyday Windows tasks."></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Awa0174/NanosworldgameJam"><img src="assets/card-jack.svg" width="49%" alt="Jack’s Last Show – 1. Platz beim nanos world Halloween Game Jam 2026. Ein Party-Spielmodus für bis zu 12 Leute im Zirkuszelt um Jack in der Box."></a>
-  <a href="https://awa0174.github.io/#projekt=timetales"><img src="assets/card-timetales.svg" width="49%" alt="TimeTales – privat, Garry’s Mod. Drei Addons für einen Harry-Potter-Rollenspielserver, etwa eine Schülersprecher-Wahl, die jeden Monat von selbst startet."></a>
+  <a href="https://github.com/Awa0174/NanosworldgameJam"><img src="assets/card-jack.svg" width="49%" alt="Jack’s Last Show – 1st place at the nanos world Halloween Game Jam 2026. A party game mode for up to 12 players in a circus tent around Jack in the Box."></a>
+  <a href="https://awa0174.github.io/#projekt=timetales"><img src="assets/card-timetales.svg" width="49%" alt="TimeTales – private, Garry’s Mod. Three addons for a Harry Potter roleplay server, such as a head student election that starts on its own every month."></a>
 </p>
 
-## Womit ich arbeite
+## What I work with
 
-<img src="assets/stack.svg" width="100%" alt="TypeScript und React in Particle Playground, MedLab Studio und Jarvis. Lua in Jack’s Last Show und TimeTales. WebGL2 und GLSL in Particle Playground. Python und FastAPI im Backend von MedLab Studio. Node.js in Jarvis. Vitest, pytest und Playwright für Tests. Vite und Tailwind CSS. HTML und CSS für meine Website.">
+<img src="assets/stack.svg" width="100%" alt="TypeScript and React in Particle Playground, MedLab Studio and Jarvis. Lua in Jack’s Last Show and TimeTales. WebGL2 and GLSL in Particle Playground. Python and FastAPI in the MedLab Studio backend. Node.js in Jarvis. Vitest, pytest and Playwright for tests. Vite and Tailwind CSS. HTML and CSS for my website.">
 
-## Auf GitHub
+## On GitHub
 
-<img src="assets/stats.svg" width="100%" alt="Statistik: eigene öffentliche Repos, Commits, zuletzt aktives Repo und die meistgenutzten Sprachen.">
+<img src="assets/stats.svg" width="100%" alt="Stats: own public repos, commits, most recently active repo and most used languages.">
 
-## Kontakt
+## Contact
 
-<a href="https://discord.com/users/972555021814202468"><img src="assets/contact.svg" width="100%" alt="Lust auf Austausch? Fragen zum Code, Ideen für einen Spielmodus oder eine Runde zusammen – am schnellsten erreichst du mich auf Discord. Fehler und Vorschläge kannst du direkt als Issue melden."></a>
+<a href="https://discord.com/users/972555021814202468"><img src="assets/contact.svg" width="100%" alt="Let’s talk! Questions about the code, an idea for a game mode or a round together – Discord is the fastest way to reach me. Bugs and suggestions can go straight into an issue."></a>
 
 <p align="center">
   <a href="https://discord.com/users/972555021814202468"><img src="assets/btn-discord.svg" alt="Discord"></a>
   <a href="https://steamcommunity.com/id/-Awa/"><img src="assets/btn-steam.svg" alt="Steam"></a>
-  <a href="https://awa0174.github.io/"><img src="assets/btn-portfolio.svg" alt="Portfolio ansehen"></a>
+  <a href="https://awa0174.github.io/"><img src="assets/btn-portfolio.svg" alt="View portfolio"></a>
 </p>
 
-<p align="center"><sub>Banner, Karten und Statistik sind selbst gezeichnet – ohne fremde Dienste; die Statistik aktualisiert sich täglich. <a href="scripts/">So entsteht das hier.</a></sub></p>
+<p align="center"><sub>Banner, cards and stats are drawn by my own scripts – no third-party services; the stats update daily. <a href="scripts/">How this is made.</a></sub></p>

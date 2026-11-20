@@ -39,14 +39,14 @@ function banner() {
   // Textblock links, senkrecht mittig
   const tx = 72;
   const h1 = 82;
-  const lead = wrap('Websites, eigene Softwareprojekte und Spielmodi – am liebsten interaktiv, zum direkt Ausprobieren.', 640, { size: 26 });
+  const lead = wrap('Websites, my own software projects and game modes – interactive whenever possible, so you can try them right away.', 640, { size: 26 });
   const blockH = 30 + 96 + 24 + lead.length * 36 + 42;
   const top = Y + (PH - blockH) / 2;
   const eyebrowY = top + 18;
   const h1Y = eyebrowY + 96;
   const leadY = h1Y + 58;
   const urlY = leadY + (lead.length - 1) * 36 + 56;
-  const preW = measure('Hi, ich bin ', { weight: 700, size: h1 });
+  const preW = measure('Hi, I’m ', { weight: 700, size: h1 });
   const awaW = measure('Awa.', { weight: 700, size: h1 });
 
   // Signaturbild rechts
@@ -77,9 +77,9 @@ function banner() {
   <ellipse class="glow" cx="${px + ps / 2}" cy="${py + ps / 2}" rx="340" ry="230" fill="url(#glow)"/>
   ${particles}
 </g>
-${text(tx, eyebrowY, 'Webentwicklung · Simulationen · Modding', { font: 'mono', size: 19, fill: t.label })}
+${text(tx, eyebrowY, 'Web development · Simulations · Modding', { font: 'mono', size: 19, fill: t.label })}
 <rect x="${r(tx + preW - 6)}" y="${r(h1Y - h1 * 0.4)}" width="${r(awaW + 12)}" height="${r(h1 * 0.5)}" fill="${t.mark}"/>
-${text(tx, h1Y, 'Hi, ich bin', { weight: 700, size: h1, fill: t.text })}
+${text(tx, h1Y, 'Hi, I’m', { weight: 700, size: h1, fill: t.text })}
 ${text(tx + preW, h1Y, 'Awa.', { weight: 700, size: h1, fill: t.text })}
 ${lead.map((line, i) => text(tx, leadY + i * 36, line, { size: 26, fill: t.soft })).join('\n')}
 ${text(tx, urlY, 'awa0174.github.io ↗', { font: 'mono', size: 19, fill: t.accent })}
@@ -89,8 +89,8 @@ ${text(tx, urlY, 'awa0174.github.io ↗', { font: 'mono', size: 19, fill: t.acce
 <rect x="${X}" y="${Y}" width="${PW}" height="${PH}" rx="24" fill="none" stroke="${t.frame}" stroke-width="2"/>`;
 
   return doc(W, H, {
-    title: 'Hi, ich bin Awa.',
-    desc: 'Webentwicklung, Simulationen und Modding. Websites, eigene Softwareprojekte und Spielmodi – am liebsten interaktiv. awa0174.github.io',
+    title: 'Hi, I’m Awa.',
+    desc: 'Web development, simulations and modding. Websites, my own software projects and game modes – interactive whenever possible. awa0174.github.io',
     style, defs,
   }, body);
 }
@@ -100,11 +100,11 @@ ${text(tx, urlY, 'awa0174.github.io ↗', { font: 'mono', size: 19, fill: t.acce
    ====================================================================== */
 
 const phrases = [
-  'baut eine Partikel-Engine für den Browser',
-  'schreibt Spielmodi in Lua für nanos world',
-  'baut Addons für Garry’s Mod',
-  'macht Medizintechnik zum Ausprobieren',
-  'baut Websites ohne Framework',
+  'builds a particle engine for the browser',
+  'writes Lua game modes for nanos world',
+  'makes addons for Garry’s Mod',
+  'turns medical tech into hands-on labs',
+  'builds websites without a framework',
 ];
 
 function typing() {
@@ -146,12 +146,12 @@ function typing() {
    ====================================================================== */
 
 const buttons = {
-  portfolio: { label: 'Portfolio ansehen', arrow: true, primary: true },
-  demo: { label: 'Live-Demo starten', arrow: true },
+  portfolio: { label: 'View portfolio', arrow: true, primary: true },
+  demo: { label: 'Launch live demo', arrow: true },
   discord: { label: 'Discord', icon: 'discord' },
   steam: { label: 'Steam', icon: 'steam' },
   github: { label: 'Code', icon: 'github' },
-  feedback: { label: 'Feedback geben', arrow: true },
+  feedback: { label: 'Give feedback', arrow: true },
 };
 
 function button({ label, icon: ic, arrow, primary }) {
@@ -177,38 +177,38 @@ ${text(x + padX + (ic ? icSize + gap : 0), y + h / 2 + 6, str, { size, weight, f
 
 const cards = {
   particle: {
-    status: ['live', 'Live-Demo'], meta: 'Web-App · v1.0', title: 'Particle Playground',
-    lead: 'Ein Editor im Browser, mit dem man Partikeleffekte wie Galaxien, Feuerwerk oder Polarlichter baut, animiert und als Video exportiert – am PC und am Handy.',
+    status: ['live', 'Live demo'], meta: 'Web app · v1.0', title: 'Particle Playground',
+    lead: 'A browser editor for building particle effects like galaxies, fireworks or northern lights, animating them and exporting them as video – on desktop and on mobile.',
     tags: ['TypeScript', 'WebGL2', 'React', 'GLSL'], img: 'particle-northern-1200.webp',
-    alt: 'Editor mit einem grünen Polarlicht aus Partikeln',
-    cta: 'Live-Demo öffnen ↗',
+    alt: 'Editor showing green northern lights made of particles',
+    cta: 'Open live demo ↗',
   },
   medlab: {
-    status: ['wip', 'In Entwicklung'], meta: 'Lernplattform · 3 Labore', title: 'MedLab Studio',
-    lead: 'Medizintechnik zum Ausprobieren: ein künstliches EKG stören und wieder sauber filtern, Reaktionszeit messen oder zwei Gerätebedienungen vergleichen.',
-    tags: ['TypeScript', 'Python', 'FastAPI'], img: 'medlab-ecg-640.webp', cta: 'Code ansehen →',
+    status: ['wip', 'In progress'], meta: 'Learning platform · 3 labs', title: 'MedLab Studio',
+    lead: 'Medical technology you can play with: add noise to a synthetic ECG and filter it clean again, measure your reaction time or compare two device interfaces.',
+    tags: ['TypeScript', 'Python', 'FastAPI'], img: 'medlab-ecg-640.webp', cta: 'View code →',
   },
   jarvis: {
-    status: ['fork', 'Fork'], meta: 'Sprachassistent · 26 Commits', title: 'Jarvis',
-    lead: 'Ein Sprachassistent von Aditya Dewaskar, den ich zu einem deutschsprachigen Helfer für den Windows-Alltag ausbaue – mit lokaler Spracherkennung und Bestätigung vor jeder Änderung.',
-    tags: ['TypeScript', 'Node.js', 'whisper.cpp'], img: 'jarvis-boot-640.webp', cta: 'Meine Änderungen ↗',
+    status: ['fork', 'Fork'], meta: 'Voice assistant · 26 commits', title: 'Jarvis',
+    lead: 'A voice assistant by Aditya Dewaskar that I’m extending into a German-speaking helper for everyday Windows tasks – with local speech recognition and a confirmation before every change.',
+    tags: ['TypeScript', 'Node.js', 'whisper.cpp'], img: 'jarvis-boot-640.webp', cta: 'My changes ↗',
   },
   jack: {
-    status: ['jam', '1. Platz'], meta: 'Halloween Game Jam 2026 · nanos world', title: 'Jack’s Last Show',
-    lead: 'Unser Siegerbeitrag zum nanos world Halloween Game Jam 2026: ein Party-Spielmodus für bis zu 12 Leute im Zirkuszelt um Jack in der Box. Events und Karten entscheiden, wer übrig bleibt.',
-    tags: ['Lua', 'nanos world', 'WebUI'], img: 'jacks-last-show-640.webp', cta: 'Code ansehen →',
+    status: ['jam', '1st place'], meta: 'Halloween Game Jam 2026 · nanos world', title: 'Jack’s Last Show',
+    lead: 'Our winning entry for the nanos world Halloween Game Jam 2026: a party game mode for up to 12 players in a circus tent around Jack in the Box. Events and cards decide who’s left standing.',
+    tags: ['Lua', 'nanos world', 'WebUI'], img: 'jacks-last-show-640.webp', cta: 'View code →',
   },
   timetales: {
-    status: ['private', 'Privat'], meta: 'Garry’s Mod · 3 Addons', title: 'TimeTales',
-    lead: 'Für den Harry-Potter-Rollenspielserver TimeTales habe ich drei Addons gebaut. Ein Beispiel: Die Schülersprecher-Wahl startet jeden Monat von selbst.',
-    tags: ['Lua', 'Garry’s Mod', 'MySQL'], cta: 'Details auf der Website ↗',
+    status: ['private', 'Private'], meta: 'Garry’s Mod · 3 Addons', title: 'TimeTales',
+    lead: 'I built three addons for TimeTales, a Harry Potter roleplay server. One example: the head student election starts on its own every month.',
+    tags: ['Lua', 'Garry’s Mod', 'MySQL'], cta: 'Details on my website ↗',
     example: {
-      kicker: 'Beispiel: mein Addon', code: 'tt_schuelersprecher', title: 'Wahl der Schülersprecher',
+      kicker: 'Example: my addon', code: 'tt_schuelersprecher', title: 'Head student election',
       steps: [
-        ['−14 Tage', 'Kandidatur und Wahlkampf starten'],
-        ['−3 Tage', 'Kandidaturschluss, Briefwahl beginnt'],
-        ['Wahlabend', 'Zeremonie in der Großen Halle'],
-        ['Zeremonie', 'Auszählung, ggf. Stichwahl, Ernennung'],
+        ['−14 days', 'Candidacy and campaign open'],
+        ['−3 days', 'Nominations close, postal vote opens'],
+        ['Election', 'Ceremony in the Great Hall'],
+        ['Ceremony', 'Count, run-off if needed, appointment'],
       ],
     },
   },
@@ -344,12 +344,12 @@ ${b.svg}
 const stack = [
   { icons: ['typescript', 'react'], name: 'TypeScript & React', use: 'Particle Playground, MedLab Studio, Jarvis' },
   { icons: ['lua'], name: 'Lua', use: 'Jack’s Last Show, TimeTales' },
-  { icons: ['webgl'], name: 'WebGL2 & GLSL', use: 'Grafik und Simulation in Particle Playground' },
-  { icons: ['python', 'fastapi'], name: 'Python & FastAPI', use: 'Backend von MedLab Studio' },
-  { icons: ['nodedotjs'], name: 'Node.js', use: 'Bridge von Jarvis' },
-  { icons: ['vitest', 'pytest'], name: 'Vitest, pytest, Playwright', use: 'Tests in Particle Playground und MedLab Studio' },
-  { icons: ['vite', 'tailwindcss'], name: 'Vite & Tailwind CSS', use: 'Vite in beiden Web-Apps, Tailwind in MedLab Studio' },
-  { icons: ['html5', 'css'], name: 'HTML & CSS', use: 'meine Website – ohne Framework' },
+  { icons: ['webgl'], name: 'WebGL2 & GLSL', use: 'Rendering and simulation in Particle Playground' },
+  { icons: ['python', 'fastapi'], name: 'Python & FastAPI', use: 'Backend of MedLab Studio' },
+  { icons: ['nodedotjs'], name: 'Node.js', use: 'Bridge in Jarvis' },
+  { icons: ['vitest', 'pytest'], name: 'Vitest, pytest, Playwright', use: 'Tests in Particle Playground and MedLab Studio' },
+  { icons: ['vite', 'tailwindcss'], name: 'Vite & Tailwind CSS', use: 'Vite in both web apps, Tailwind in MedLab Studio' },
+  { icons: ['html5', 'css'], name: 'HTML & CSS', use: 'my website – no framework' },
 ];
 
 function stackPanel() {
@@ -376,7 +376,7 @@ function stackPanel() {
       + text(tx, y + 44, s.use, { size: us, fill: t.muted });
   });
   return doc(W, PH + S + 4, {
-    title: 'Womit ich arbeite',
+    title: 'What I work with',
     desc: stack.map((s) => `${s.name}: ${s.use}`).join('. '),
   }, body);
 }
@@ -388,7 +388,7 @@ function stackPanel() {
 function contact() {
   const W = 1200, S = 6;
   const av = 136, ax = 2, bx = 196, bw = W - bx - 12, pad = 36;
-  const lines = wrap('Fragen zum Code, Ideen für einen Spielmodus, eine Runde zusammen oder Lust, an etwas mitzubauen – am schnellsten erreichst du mich auf Discord. Fehler und Vorschläge zu einem Projekt kannst du direkt als Issue melden.', bw - pad * 2, { size: 20 });
+  const lines = wrap('Questions about the code, an idea for a game mode, a round together or want to build something with me – Discord is the fastest way to reach me. Bugs and suggestions for a project can go straight into an issue.', bw - pad * 2, { size: 20 });
   const bh = pad + 26 + 44 + lines.length * 30 + pad - 8;
   const H = bh + S + 6;
   const by = 2;
@@ -403,11 +403,11 @@ function contact() {
 ${panel(bx, by, bw, bh, { radius: 20, shadow: S, stroke: 2 })}
 <polygon points="${tail(0, 0)}" fill="${t.card}"/>
 <polyline points="${tail(0, 0)}" fill="none" stroke="${t.frame}" stroke-width="2" stroke-linejoin="round"/>
-${text(bx + pad, by + pad + 14, 'Discord · Steam · GitHub-Issues', { font: 'mono', size: 15, fill: t.label })}
-${text(bx + pad, by + pad + 60, 'Lust auf Austausch?', { weight: 700, size: 34, fill: t.text })}
+${text(bx + pad, by + pad + 14, 'Discord · Steam · GitHub issues', { font: 'mono', size: 15, fill: t.label })}
+${text(bx + pad, by + pad + 60, 'Let’s talk!', { weight: 700, size: 34, fill: t.text })}
 ${lines.map((l, i) => text(bx + pad, by + pad + 100 + i * 30, l, { size: 20, fill: t.soft })).join('')}`;
   const defs = `<clipPath id="av"><rect x="${ax}" y="${ay}" width="${av}" height="${av}" rx="18"/></clipPath>`;
-  return doc(W, H, { title: 'Lust auf Austausch?', desc: lines.join(' '), defs }, body);
+  return doc(W, H, { title: 'Let’s talk!', desc: lines.join(' '), defs }, body);
 }
 
 /* ======================================================================
@@ -415,13 +415,13 @@ ${lines.map((l, i) => text(bx + pad, by + pad + 100 + i * 30, l, { size: 20, fil
    ====================================================================== */
 
 const jamAward = {
-  kicker: 'nanos world · Halloween Game Jam 2026 · 4. November 2026',
-  title: '1. Platz beim Halloween Game Jam',
-  lead: 'Mit Jack’s Last Show (eingereicht als „Death in the Box“) hat unser Team TimeTales das öffentliche Playtest-Wochenende gewonnen – und dazu zwei Sonderpreise.',
+  kicker: 'nanos world · Halloween Game Jam 2026 · November 4, 2026',
+  title: '1st place at the Halloween Game Jam',
+  lead: 'With Jack’s Last Show (submitted as “Death in the Box”), our team TimeTales won the public playtest weekend – plus two special awards.',
   scores: [
-    { label: 'Gesamtwertung', value: '1. Platz', score: '4,69', top: true },
-    { label: 'Best Theme Fit', value: 'Sonderpreis', score: '4,77' },
-    { label: 'Best Creativity', value: 'Sonderpreis', score: '4,74' },
+    { label: 'Overall', value: '1st place', score: '4.69', top: true },
+    { label: 'Best Theme Fit', value: 'Special award', score: '4.77' },
+    { label: 'Best Creativity', value: 'Special award', score: '4.74' },
   ],
 };
 
@@ -484,4 +484,4 @@ for (const row of [['medlab', 'jarvis'], ['jack', 'timetales']]) {
 write('award', award());
 write('stack', stackPanel());
 write('contact', contact());
-console.log('SVGs geschrieben nach assets/');
+console.log('SVGs written to assets/');
